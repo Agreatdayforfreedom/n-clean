@@ -6,7 +6,7 @@ import { dbAdapter } from '../../adapters/db.adapter';
 export class UCTodo {
   constructor(private db: dbAdapter) {}
 
-  addTodo(todo: Todo) {
-    return this.db.create(todo);
+  async addTodo(todo: Todo) {
+    return await this.db.create(todo);
   }
 }
